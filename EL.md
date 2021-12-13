@@ -15,8 +15,8 @@
 - header: ${header.요청헤더명}
 - cookie: ${cookie.쿠키명}
 - pageContext: ${pageContext.getter메소드이름}
-- EL 표현식으로 속성을 검색하면 PageContext -> HttpServletRequest -> HttpSession -> ServletContext 순으로 표현식에서 지정한 속성을 검색한다.
-- 각 객체를 순서대로 검색하는 도중 EL 표현식에 해당하는 속성이 발견되면, 그 속성값을 표현하고 검색 순위상 뒤에 남아있는 객체에서는 검색작업을 수행하지 않는다.
+- EL 표현식으로 속성을 검색하면 <br> PageContext -> HttpServletRequest -> HttpSession -> ServletContext 순으로 표현식에서 지정한 속성을 검색한다.
+- 각 객체를 순서대로 검색하는 도중 EL 표현식에 해당하는 속성이 발견되면, <br> 그 속성값을 표현하고 검색 순위상 뒤에 남아있는 객체에서는 검색작업을 수행하지 않는다.
 
 - 아래 사진과 같이 연산식이 필요한 경우, jsp 내에서 연산을 하는 것이 아니라 Cart 클래스에 getXXX 메소드로 정의해준 후 값을 조회할 수 있다.
 - Cart 클래스 안에 discountPercent, discountedPrice, orderPrice가 멤버변수로 정의되어 있지 않아도 된다.
