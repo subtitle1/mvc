@@ -44,7 +44,7 @@
     + last: 마지막번째 요소인 경우
 ![image](https://user-images.githubusercontent.com/87356533/145975590-c5bb8f9e-a3a0-42b8-9649-1d8b081eb9d9.png)
 - c:forEach를 사용하는 다른 방식
-- var에는 변수명, begin에는 시작 페이지번호, end에는 긑 페이지번호를 적는다.
+  + var에는 변수명, begin에는 시작 페이지번호, end에는 긑 페이지번호를 적는다.
 ![image](https://user-images.githubusercontent.com/87356533/145976039-85a1280e-c9c9-4b60-b602-dca0d18d0f18.png)
 
 
