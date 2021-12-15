@@ -25,7 +25,7 @@
   + 라이브러리나 프레임워크의 추가 및 설정이 필요함
 
 # Servlet
-- Http 요청을 처리할 수 있는 자바 클래스
+- Http 요청을 처리할 수 있는 자바 클래스 (웹 개발을 위해 만든 표준)
 - 클라이언트의 HTTP 요청을 처리하는 자바클래스는 반드시 HttpServlet을 상속받아야 한다
 - 서블릿을 실행하기 위해서는 서버가 필요하다
 - 서블릿의 생성/유지/관리/폐기, 요청에 대한 적절한 서블릿의 실행을 서버가 담당한다
@@ -34,8 +34,16 @@
 - HTTP 요청을 처리하는 모든 웹 애플리케이션의 부모 클래스
 - 주요 메소드
   + void init()
+    + HttpServlet 객체의 초기화를 담당한다
+    + Tomcat이 HttpServlet 객체를 생성하면 init() 메소드를 실행한다
+    + 성공적으로 init() 메소드가 호출되었다면 service() 메소드를 수행해서 클라이언트의 요청을 수행한다
   + void destroy()
+    + 서블릿 객체가 더이상 서비스를 하고 있지 않는 경우 호출된다<br>(서블릿이 메모리로부터 제거)
   + void service(HttpServletRequest request, HttpServletResponse response)
+    + Http 요청이 올 때마다 실행되는 메소드다
+    + Http 요청을 분석해서 요청 방식을 확인하고, 요청방식에 따라서 메소드를 실행한다
+    + 요청 방식에 따라 아래에 나열된 네가지 메소드를 호출한다(주로 doGet, doPost를 사용)
+    + 주로 재정의되어 사용된다
   + void doGet(HttpServletRequest request, HttpServletResponse response)
   + void doPost(HttpServletRequest request, HttpServletResponse response)
   + void doPut(HttpServletRequest request, HttpServletResponse response)
